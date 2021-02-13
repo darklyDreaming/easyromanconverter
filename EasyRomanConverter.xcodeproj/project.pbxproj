@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B20CC1EB25D7E3F400F9B3AC /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1EA25D7E3F400F9B3AC /* AboutView.swift */; };
 		B20CC1EF25D7E78D00F9B3AC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1EE25D7E78D00F9B3AC /* AboutViewController.swift */; };
+		B20CC1F225D8641100F9B3AC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1F125D8641100F9B3AC /* StringExtension.swift */; };
 		B23C378725C9F339007D5460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C378625C9F339007D5460 /* AppDelegate.swift */; };
 		B23C378925C9F339007D5460 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C378825C9F339007D5460 /* SceneDelegate.swift */; };
 		B23C378B25C9F339007D5460 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C378A25C9F339007D5460 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		B20CC1EA25D7E3F400F9B3AC /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		B20CC1EE25D7E78D00F9B3AC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		B20CC1F125D8641100F9B3AC /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B23C378325C9F339007D5460 /* EasyRomanConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRomanConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23C378625C9F339007D5460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B23C378825C9F339007D5460 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				B23C37C125CB2534007D5460 /* MainViewConfigurator.swift */,
+				B20CC1F125D8641100F9B3AC /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				B23C37A725C9F42D007D5460 /* Model.swift in Sources */,
 				B23C37C925CB2ADB007D5460 /* AttributedStrings.swift in Sources */,
 				B23C37B025C9F5C9007D5460 /* MainView.swift in Sources */,
+				B20CC1F225D8641100F9B3AC /* StringExtension.swift in Sources */,
 				B23C378925C9F339007D5460 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

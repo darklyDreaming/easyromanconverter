@@ -14,37 +14,30 @@ class Presenter {
     private var model = Model()
     
     // TODO: Fix the checker
-    func checkInput<T>(input: T) {
+    func checkInput(input: String) {
         
-        if let integerInput = input as? Int {
+        if input.isInt {
             
-            // Pass it to the model
+            guard let integerInput = Int(input) else {
+                return
+            }
+            
             let result = model.intToRoman(integerInput)
             conversionPerformed(result: result)
-            return
             
-        }
-        
-        if let stringInput = input as? String {
-            // Pass it to the model
-            let result = model.romanToInt(stringInput)
+        } else {
+            
+            let result = String(model.romanToInt(input))
             conversionPerformed(result: result)
-            return
             
         }
-        
-        let result = "Error"
-        viewController?.showContent(content: result)
-        print("Couldn't check the input")
-        return
     }
 }
 
 extension Presenter: ModelDelegate {
+    
     func conversionPerformed<T>(result: T) {
-        
         viewController?.showContent(content: result)
-        
     }
     
 }
