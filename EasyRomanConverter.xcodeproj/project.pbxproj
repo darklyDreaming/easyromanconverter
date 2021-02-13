@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20CC1EB25D7E3F400F9B3AC /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1EA25D7E3F400F9B3AC /* AboutView.swift */; };
+		B20CC1EF25D7E78D00F9B3AC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1EE25D7E78D00F9B3AC /* AboutViewController.swift */; };
 		B23C378725C9F339007D5460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C378625C9F339007D5460 /* AppDelegate.swift */; };
 		B23C378925C9F339007D5460 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C378825C9F339007D5460 /* SceneDelegate.swift */; };
 		B23C378B25C9F339007D5460 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C378A25C9F339007D5460 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B20CC1EA25D7E3F400F9B3AC /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		B20CC1EE25D7E78D00F9B3AC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		B23C378325C9F339007D5460 /* EasyRomanConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRomanConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23C378625C9F339007D5460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B23C378825C9F339007D5460 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B20CC1E325D7DD8000F9B3AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B23C37C125CB2534007D5460 /* MainViewConfigurator.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B23C377A25C9F339007D5460 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +80,7 @@
 		B23C378525C9F339007D5460 /* EasyRomanConverter */ = {
 			isa = PBXGroup;
 			children = (
+				B20CC1E325D7DD8000F9B3AC /* Extensions */,
 				B23C37C425CB25AB007D5460 /* Helpers */,
 				B23C379E25C9F37F007D5460 /* Views */,
 				B23C379D25C9F368007D5460 /* ViewControllers */,
@@ -103,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				B23C37B925C9F69F007D5460 /* MainScreenViewController.swift */,
+				B20CC1EE25D7E78D00F9B3AC /* AboutViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -111,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				B23C37AF25C9F5C9007D5460 /* MainView.swift */,
-				B23C37C125CB2534007D5460 /* MainViewConfigurator.swift */,
+				B20CC1EA25D7E3F400F9B3AC /* AboutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,9 +210,11 @@
 			files = (
 				B23C37C225CB2534007D5460 /* MainViewConfigurator.swift in Sources */,
 				B23C37C625CB25C0007D5460 /* Colors.swift in Sources */,
+				B20CC1EB25D7E3F400F9B3AC /* AboutView.swift in Sources */,
 				B23C378B25C9F339007D5460 /* ViewController.swift in Sources */,
 				B23C37BE25C9F6ED007D5460 /* Presenter.swift in Sources */,
 				B23C378725C9F339007D5460 /* AppDelegate.swift in Sources */,
+				B20CC1EF25D7E78D00F9B3AC /* AboutViewController.swift in Sources */,
 				B23C37BA25C9F69F007D5460 /* MainScreenViewController.swift in Sources */,
 				B23C37A725C9F42D007D5460 /* Model.swift in Sources */,
 				B23C37C925CB2ADB007D5460 /* AttributedStrings.swift in Sources */,

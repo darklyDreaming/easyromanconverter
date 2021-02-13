@@ -16,5 +16,4 @@ struct Colors {
     static let chocoBrown: UIColor = UIColor(red: 107/255, green: 80/255, blue: 42/255, alpha: 1)
     static let slightlyDimmedBeige: UIColor = UIColor(red: 201/255, green: 172/255, blue: 153/255, alpha: 1)
     
-    
 }

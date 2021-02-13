@@ -9,18 +9,23 @@ import UIKit
 
 class MainScreenViewController: UIViewController {
     
-    private var presenter = Presenter()
+    var presenter: Presenter?
     private var contentView = MainView()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(contentView)
         setup()
+        presenter = Presenter()
+        presenter?.viewController = self
+        contentView.convertButton.addTarget(self, action: #selector(convertNumber), for: .touchUpInside)
+        contentView.aboutButton.addTarget(self, action: #selector(showAboutScreen), for: .touchUpInside)
+
     }
     
     func showContent<T>(content: T) {
         
+        contentView.showOutput(output: content)
         
     }
     
@@ -30,7 +35,26 @@ class MainScreenViewController: UIViewController {
         contentView.setBackground(color: Colors.classicBeige)
         contentView.setup()
         
-    
     }
      
+    @objc private func convertNumber() {
+        
+        let userInput = contentView.textFieldView.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        if let userInput = userInput {
+            presenter?.checkInput(input: userInput)
+        } else {
+            contentView.showError()
+        }
+        
+    }
+    
+    @objc private func showAboutScreen() {
+        
+        let aboutVC = AboutViewController()
+        aboutVC.isModalInPresentation = true
+        aboutVC.modalPresentationStyle = .pageSheet
+        self.present(aboutVC, animated: true) {
+            aboutVC.animateAtAppearance()
+        }
+    }
 }

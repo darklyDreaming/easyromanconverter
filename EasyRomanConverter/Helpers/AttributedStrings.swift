@@ -22,6 +22,11 @@ struct AttributedStrings {
     
     static let standardTitleText: [NSAttributedString.Key: Any] = [
         .foregroundColor : UIColor.black,
-        .font : UIFont(name: "Arial Hebrew", size: 28),
+        .font : UIFont(name: "Arial Hebrew", size: 28)
+    ]
+    
+    static let aboutButtonText: [NSAttributedString.Key: Any] = [
+        .foregroundColor : UIColor.black,
+        .font : UIFont(name: "Arial Hebrew", size: 18)
     ]
 }
