@@ -18,6 +18,7 @@ class AboutView: UIView {
         label.alpha = 0
         
         return label
+        
     }()
     
     func configureAboutTextLabel(vc: AboutViewController) {

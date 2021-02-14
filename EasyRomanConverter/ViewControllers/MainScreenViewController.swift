@@ -4,7 +4,7 @@
 //
 //  Created by Yulia Tsyrkunova on 03.02.2021.
 //
-
+// TODO: Fix the keyboard insets
 import UIKit
 
 class MainScreenViewController: UIViewController {
