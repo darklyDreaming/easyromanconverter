@@ -12,8 +12,7 @@ class Presenter {
     weak var viewController: MainScreenViewController?
     
     private var model = Model()
-    
-    // TODO: Fix the checker
+
     func checkInput(input: String) {
         
         if input.isInt {

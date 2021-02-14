@@ -86,16 +86,17 @@ class MainView: UIView {
     /// Presents the result in the output text label.
     
     func showOutput<T>(output: T) {
-        
-        outputLabel.text = output as? String
-        
+        DispatchQueue.main.async {
+            self.outputLabel.text = output as? String
+        }
     }
     
     /// Shows error in the output text label.
     func showError() {
         
-        outputLabel.text = "Error"
+        DispatchQueue.main.async {
+            self.outputLabel.text = "Error"
+        }
         
     }
-    
 }

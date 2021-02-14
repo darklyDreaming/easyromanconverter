@@ -53,8 +53,10 @@ class MainScreenViewController: UIViewController {
         let aboutVC = AboutViewController()
         aboutVC.isModalInPresentation = true
         aboutVC.modalPresentationStyle = .pageSheet
-        self.present(aboutVC, animated: true) {
-            aboutVC.animateAtAppearance()
+        DispatchQueue.main.async {
+            self.present(aboutVC, animated: true) {
+                aboutVC.animateAtAppearance()
+            }
         }
     }
 }
