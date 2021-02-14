@@ -47,7 +47,7 @@ class MainScreenViewController: UIViewController {
         }
         
     }
-    
+ // TODO: -Fix the dismiss gesture
     @objc private func showAboutScreen() {
         
         let aboutVC = AboutViewController()
