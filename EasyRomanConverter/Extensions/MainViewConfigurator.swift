@@ -6,90 +6,97 @@
 //
 import Foundation
 import UIKit
-
+import SnapKit
 
 extension UIView {
-    
-    func setBackground(color: UIColor) {
-        
-        self.backgroundColor = color
-        
-    }
+
     /// This function sets makes the view fullscreen.
     func configureFullScreenConstraints(vc: UIViewController) {
         
-        self.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.leftAnchor.constraint(equalTo: vc.view.leftAnchor).isActive = true
-        self.rightAnchor.constraint(equalTo: vc.view.rightAnchor).isActive = true
-        self.topAnchor.constraint(equalTo: vc.view.topAnchor).isActive = true
-        self.bottomAnchor.constraint(equalTo: vc.view.bottomAnchor).isActive = true
+        self.snp.makeConstraints { (make) in
+            
+            make.edges.equalToSuperview()
+            
+        }
         
     }
     
     func configureWelcomeLabel(for view: UIView, welcomeLabel: UILabel) {
         
         view.addSubview(welcomeLabel)
-        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        welcomeLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        welcomeLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
-        welcomeLabel.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        welcomeLabel.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(view).offset(100)
+            make.left.equalTo(view).offset(20)
+            make.right.equalTo(view).offset(-20)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(200)
+            
+        }
         
     }
     
     func configureTextField(for view: UIView, textfield: UITextField) {
         
         view.addSubview(textfield)
-        textfield.translatesAutoresizingMaskIntoConstraints = false
         
-        textfield.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40).isActive = true
-        textfield.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40).isActive = true
-        textfield.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        textfield.topAnchor.constraint(equalTo: view.topAnchor, constant: 300).isActive = true
-        textfield.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        textfield.snp.makeConstraints { (make) in
+            
+            make.top.equalToSuperview().offset(300)
+            make.left.equalToSuperview().offset(40)
+            make.right.equalToSuperview().offset(-40)
+            make.height.equalTo(50)
+            
+        }
         
     }
     
     func configureOutputLabel(for view: UIView, outputLabel: UILabel) {
         
         view.addSubview(outputLabel)
-        outputLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        outputLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40).isActive = true
-        outputLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40).isActive = true
-        outputLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        outputLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        outputLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 400).isActive = true
-        
+        outputLabel.snp.makeConstraints { (make) in
+            
+            make.top.equalToSuperview().offset(400)
+            make.left.equalToSuperview().offset(40)
+            make.right.equalToSuperview().offset(-40)
+            make.height.equalTo(50)
+            
+        }
+
     }
     
     func configureConvertButton(for view: UIView, button: UIButton) {
         
         view.addSubview(button)
-        button.translatesAutoresizingMaskIntoConstraints = false
         
-        button.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40).isActive = true
-        button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40).isActive = true
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        button.topAnchor.constraint(equalTo: view.topAnchor, constant: 500).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-    
+        button.snp.makeConstraints { (make) in
+            
+            make.top.equalToSuperview().offset(500)
+            make.left.equalToSuperview().offset(40)
+            make.right.equalToSuperview().offset(-40)
+            make.height.equalTo(50)
+            
+        }
+
     }
     
     func configureAboutButton(for view: UIView, button: UIButton) {
         
         view.addSubview(button)
         
-        button.translatesAutoresizingMaskIntoConstraints = false
+        button.snp.makeConstraints { (make) in
+            
+            make.left.equalToSuperview().offset(40)
+            make.right.equalToSuperview().offset(-40)
+            make.height.equalTo(50)
+            make.bottom.equalToSuperview().offset(-40)
+            make.centerX.equalToSuperview()
         
-        button.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40).isActive = true
-        button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40).isActive = true
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+            
+        }
+        
     }
     
 }

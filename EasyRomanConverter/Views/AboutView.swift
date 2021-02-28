@@ -13,6 +13,7 @@ class AboutView: UIView {
         
         let label = UILabel()
         let text = NSAttributedString(string: "This small app was inspired by the respective Leetcode challenge. Have fun!", attributes: AttributedStrings.standardLabelText)
+        label.textAlignment = .center
         label.attributedText = text
         label.numberOfLines = 0
         label.alpha = 0
@@ -24,11 +25,16 @@ class AboutView: UIView {
     func configureAboutTextLabel(vc: AboutViewController) {
         
         vc.view.addSubview(aboutTextLabel)
-        aboutTextLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        aboutTextLabel.centerXAnchor.constraint(equalTo: vc.view.centerXAnchor).isActive = true
-        aboutTextLabel.centerYAnchor.constraint(equalTo: vc.view.centerYAnchor).isActive = true
-        
+        aboutTextLabel.snp.makeConstraints { (make) in
+            
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.left.equalToSuperview().offset(40)
+            make.right.equalToSuperview().offset(-40)
+            
+        }
+
     }
     
     func setupAppearance() {

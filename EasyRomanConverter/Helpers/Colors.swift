@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Colors {
+enum Colors {
     
     static let yellowishGray: UIColor = UIColor(red: 227/255, green: 226/255, blue: 180/255, alpha: 0.89)
     static let yellowishGrayTwo: UIColor = UIColor(red: 196/255, green: 196/255, blue: 150/255, alpha: 0.77)

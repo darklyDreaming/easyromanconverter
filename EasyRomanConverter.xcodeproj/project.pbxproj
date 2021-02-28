@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		B23C37C225CB2534007D5460 /* MainViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C37C125CB2534007D5460 /* MainViewConfigurator.swift */; };
 		B23C37C625CB25C0007D5460 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C37C525CB25C0007D5460 /* Colors.swift */; };
 		B23C37C925CB2ADB007D5460 /* AttributedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C37C825CB2ADB007D5460 /* AttributedStrings.swift */; };
+		B2B504E625EC2EBA0026E778 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B2B504E525EC2EBA0026E778 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B504E625EC2EBA0026E778 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +160,9 @@
 			dependencies = (
 			);
 			name = EasyRomanConverter;
+			packageProductDependencies = (
+				B2B504E525EC2EBA0026E778 /* SnapKit */,
+			);
 			productName = EasyRomanConverter;
 			productReference = B23C378325C9F339007D5460 /* EasyRomanConverter.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +190,9 @@
 				Base,
 			);
 			mainGroup = B23C377A25C9F339007D5460;
+			packageReferences = (
+				B2B504E425EC2EBA0026E778 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = B23C378425C9F339007D5460 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -417,6 +425,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2B504E425EC2EBA0026E778 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2B504E525EC2EBA0026E778 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2B504E425EC2EBA0026E778 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B23C377B25C9F339007D5460 /* Project object */;
 }

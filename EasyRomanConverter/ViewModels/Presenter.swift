@@ -11,7 +11,7 @@ class Presenter {
     
     weak var viewController: MainScreenViewController?
     
-    private var model = Model()
+    private let model = Model()
 
     func checkInput(input: String) {
         
@@ -36,7 +36,9 @@ class Presenter {
 extension Presenter: ModelDelegate {
     
     func conversionPerformed<T>(result: T) {
+
         viewController?.showContent(content: result)
+        
     }
     
 }

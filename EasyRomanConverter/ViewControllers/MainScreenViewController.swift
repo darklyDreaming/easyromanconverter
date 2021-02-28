@@ -9,7 +9,7 @@ import UIKit
 
 class MainScreenViewController: UIViewController {
     
-    var presenter: Presenter?
+    private var presenter: Presenter?
     private var contentView = MainView()
     
     override func viewDidLoad() {
@@ -23,6 +23,13 @@ class MainScreenViewController: UIViewController {
 
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        contentView.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        
+    }
+    
     func showContent<T>(content: T) {
         
         contentView.showOutput(output: content)
@@ -32,7 +39,7 @@ class MainScreenViewController: UIViewController {
     private func setup() {
         
         contentView.configureFullScreenConstraints(vc: self)
-        contentView.setBackground(color: Colors.classicBeige)
+        contentView.backgroundColor = Colors.classicBeige
         contentView.setup()
         
     }
@@ -47,16 +54,21 @@ class MainScreenViewController: UIViewController {
         }
         
     }
- // TODO: -Fix the dismiss gesture
+
     @objc private func showAboutScreen() {
         
         let aboutVC = AboutViewController()
-        aboutVC.isModalInPresentation = true
-        aboutVC.modalPresentationStyle = .pageSheet
-        DispatchQueue.main.async {
+        
             self.present(aboutVC, animated: true) {
                 aboutVC.animateAtAppearance()
-            }
         }
     }
+    
+    // TODO: -Fix error showing
+    func showError() {
+        
+        contentView.showError()
+        
+    }
 }
+
